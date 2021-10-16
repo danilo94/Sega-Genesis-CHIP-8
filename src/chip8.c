@@ -304,6 +304,7 @@ void initializeSystem(){
   initFontSet();
   clearMemory();
   clearScreen();
+  clearkeys();
   for (int i=0; i<16; i++){
     myChip8.stack[i]=0;
   }
