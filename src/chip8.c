@@ -1,4 +1,4 @@
-#include <chip8.h>
+#include "chip8.h"
 #include <genesis.h>
 void emulationCycle(){
   // Fetch opcode
