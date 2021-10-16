@@ -1,0 +1,13 @@
+{ 
+    "C_Cpp.default.includePath": ["${env:GDK}\\inc",
+    "${env:GDK}\\res",
+    "res",
+    "inc"
+],
+"files.associations": {
+    "tileprocessing.h": "c",
+    "chip8.h": "c",
+    "stdbool.h": "c",
+    "genesis.h": "c"
+}
+}
