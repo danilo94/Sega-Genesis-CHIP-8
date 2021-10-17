@@ -111,11 +111,10 @@ const u32 tile10[8]={
 void initLogo(){
 
     VDP_setPalette(PAL2,logo.palette->data);
-    VDP_drawBitmap(VDP_BG_B,&logo,12,0);
+    VDP_drawBitmap(VDP_BG_A,&logo,12,0);
 }
 
 void initTiles(){
-    initLogo();
     VDP_setPaletteColor(1, RGB24_TO_VDPCOLOR(0x32FF66)); //Green
     VDP_setPaletteColor(0, RGB24_TO_VDPCOLOR(0x000000));
     VDP_loadTileData(tile1,TILE1,1,DMA_QUEUE);
@@ -128,8 +127,6 @@ void initTiles(){
     VDP_loadTileData(tile8,TILE8,1,DMA_QUEUE);
     VDP_loadTileData(tile9,TILE9,1,DMA_QUEUE);
     VDP_loadTileData(tile10,TILE10,1,DMA_QUEUE);
-    
-    drawBorder();
 }
 
 void processGraphics(unsigned char *gfx){

@@ -9,6 +9,7 @@
     "chip8.h": "c",
     "stdbool.h": "c",
     "genesis.h": "c",
-    "input.h": "c"
+    "input.h": "c",
+    "gamecontroller.h": "c"
 }
 }

@@ -5,38 +5,46 @@ void initJoyHandler(){
 }
 
 void joyHandler( u16 joy, u16 changed, u16 state){
-
+    u16 key =0x0;
 	if (joy == JOY_1)
 	{
         clearkeys();
 		if (state & BUTTON_UP)
 		{
-           myChip8.key[UP]=1;
+            key = UP;
 		}
 		else if (state & BUTTON_DOWN)
 		{
-            myChip8.key[DOWN]=1;
+            key = DOWN;
         }
         else if (state & BUTTON_LEFT){
-           myChip8.key[LEFT]=1;
-
+           key = LEFT; 
         }
         else if (state & BUTTON_RIGHT){
-            myChip8.key[RIGHT]=1;
+            key = RIGHT; 
         }
         else if (state & BUTTON_A){
-            myChip8.key[A]=1;
+            key = A; 
         }
         else if (state & BUTTON_B){
-
-            myChip8.key[B]=1;
+            key = B;
         }
         else if (state & BUTTON_C){
-
-            myChip8.key[C]=1;
+            key =C;
         }
         else if (state & BUTTON_START){
-            resetChip8();
+            key = RESET;
+        }
+        if (myGameController.gameInProgress){
+            if (key != RESET){
+                myChip8.key[key]=1;
+            }
+            else{
+                moveMenuCursor(key);
+            }
+        }
+        else{
+            moveMenuCursor(key);
         }
 	}
 }

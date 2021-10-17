@@ -1,8 +1,8 @@
 #ifndef INPUT_H
 #define INPUT_H
 #include <genesis.h>
-#include "chip8.h"
-
+#include "chip8.h" 
+#include "gamecontroller.h"
 
 #define UP 0x8
 #define DOWN 0x2
@@ -13,8 +13,7 @@
 #define B 0x2
 
 #define C 0x3
-
-
+#define RESET 0xAA
 
 void initJoyHandler();
 void joyHandler( u16 joy, u16 changed, u16 state);
