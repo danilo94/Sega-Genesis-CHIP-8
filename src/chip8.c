@@ -1,3 +1,17 @@
+///////////////////////////////////////////////////////////////////////////////
+// Project description
+// ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+// Name: myChip8
+//
+// Author: Laurence Muller
+// Contact: laurence.muller@gmail.com
+//
+// License: GNU General Public License (GPL) v2 
+// ( http://www.gnu.org/licenses/old-licenses/gpl-2.0.html )
+//
+// Copyright (C) 2011 Laurence Muller / www.multigesture.net
+///////////////////////////////////////////////////////////////////////////////
+
 #include "chip8.h"
 #include <genesis.h>
 void emulationCycle(){
