@@ -36,7 +36,7 @@ void joyHandler( u16 joy, u16 changed, u16 state){
             myChip8.key[C]=1;
         }
         else if (state & BUTTON_START){
-
+            resetChip8();
         }
 	}
 }

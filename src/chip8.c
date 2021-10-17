@@ -363,3 +363,8 @@ void initFontSet(){
      myChip8.fontSet[i]=myFontSet[i];
   }
 }
+
+
+void resetChip8(){
+  initializeSystem();
+}

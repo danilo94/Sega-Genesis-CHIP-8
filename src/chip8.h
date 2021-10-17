@@ -30,4 +30,5 @@ void clearScreen();
 void initializeSystem();
 void initFontSet();
 void clearkeys();
+void resetChip8();
 #endif
