@@ -4,10 +4,14 @@ void initGameController(){
     myGameController.gameInProgress = FALSE;
     myGameController.timeCounter = 60;
     myGameController.selectedOption=0;
-    initTiles();
+    initLogo();
     initJoyHandler();
     initMenu();
     loadMenu();
+    initTiles();
+    drawBorder();
+
+
 }
 
 
@@ -17,25 +21,29 @@ void initMenu(){
     myMenuOption[1] = (menuOption){17,7,"Tank"};
     myMenuOption[2] = (menuOption){17,8,"Boat"};
     myGameController.cursor = SPR_addSprite(&cursor,(myMenuOption[0].x*8)-10, (myMenuOption[0].y*8), 0);
-
-}
-
-void loadMenu(){
-    BMP_clear();
-    initLogo();
-    myGameController.selectedOption=0;
-    updateCursorPosition();
     VDP_setPaletteColor(15,RGB24_TO_VDPCOLOR(0x32FF66));
     for (int i=0; i<3; i++){
         menuOption menuOption = myMenuOption[i];
         VDP_drawText(menuOption.label,menuOption.x,menuOption.y);
     }
+
+}
+
+void loadMenu(){
+    clearChipFrame();
+    myGameController.selectedOption=0;
+    updateCursorPosition();
+
+}
+
+void clearChipFrame(){
+    resetChip8();
+    processGraphics(myChip8.gfx);
+
 }
 
 void startGame(){
-    initLogo();
     resetChip8();
-    drawBorder();
     selectGame();
 }
 
