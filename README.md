@@ -1,3 +1,2 @@
-# My Awesome Game
+# Sega Genesis CHIP-8 Interpreter
 
-This is My Awesome 16 Bit Cartridge game for mega Drive
