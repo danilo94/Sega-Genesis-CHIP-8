@@ -110,7 +110,7 @@ const u32 tile10[8]={
 
 void initLogo(){
 
-    VDP_setPalette(PAL2,logo.palette->data);
+    VDP_setPalette(PAL3,logo.palette->data);
     VDP_drawBitmap(VDP_BG_A,&logo,12,0);
 }
 
