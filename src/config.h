@@ -7,6 +7,10 @@
 #define TILE4 4
 #define TILE5 5
 #define TILE6 6
+#define TILE7 7
+#define TILE8 8
+#define TILE9 9
+#define TILE10 10
 #define X0 4
 #define Y0 10
 #endif

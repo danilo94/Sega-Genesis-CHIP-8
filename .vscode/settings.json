@@ -8,6 +8,8 @@
     "tileprocessing.h": "c",
     "chip8.h": "c",
     "stdbool.h": "c",
-    "genesis.h": "c"
+    "genesis.h": "c",
+    "input.h": "c",
+    "gamecontroller.h": "c"
 }
 }

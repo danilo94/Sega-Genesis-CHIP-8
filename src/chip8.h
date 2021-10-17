@@ -4,7 +4,7 @@
 
 
 typedef struct {
-unsigned char fontSet[80];
+u8 fontSet[80];
 u16 opcode;
 u8 memory[4096];
 u8 V[16];
@@ -30,4 +30,5 @@ void clearScreen();
 void initializeSystem();
 void initFontSet();
 void clearkeys();
+void resetChip8();
 #endif

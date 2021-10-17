@@ -1,4 +1,4 @@
-#include <chip8.h>
+#include "chip8.h"
 #include <genesis.h>
 void emulationCycle(){
   // Fetch opcode
@@ -304,6 +304,7 @@ void initializeSystem(){
   initFontSet();
   clearMemory();
   clearScreen();
+  clearkeys();
   for (int i=0; i<16; i++){
     myChip8.stack[i]=0;
   }
@@ -361,4 +362,9 @@ void initFontSet(){
   for (int i=0; i<80; i++){
      myChip8.fontSet[i]=myFontSet[i];
   }
+}
+
+
+void resetChip8(){
+  initializeSystem();
 }
