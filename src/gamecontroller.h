@@ -26,21 +26,15 @@ gameController myGameController;
 
 menuOption myMenuOption[MENU_OPTIONS];
 
-
 void initGameController();
-
 void initMenu();
-
 void loadMenu();
-
 void selectGame();
-
 void runGame();
-
 void moveMenuCursor(u8 movement);
-
 void moveCursorUp();
 void moveCursorDown();
+void clearChipFrame();
 
 
 #endif
