@@ -109,7 +109,6 @@ const u32 tile10[8]={
 };
 
 void initLogo(){
-
     VDP_setPalette(PAL3,logo.palette->data);
     VDP_drawBitmap(VDP_BG_A,&logo,12,0);
 }
@@ -169,7 +168,6 @@ void drawTile(int i,int x,int y, bool changePlane,unsigned char *gfx){
                 tileToDraw = TILE6;
             }
         }
-
         if (pos1 == 1 && pos2 == 0){
             if (bgToDraw==BG_A){
                 tileToDraw = TILE1;
